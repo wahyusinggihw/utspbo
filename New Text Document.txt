@@ -1,0 +1,31 @@
+World
+-Menu
+-MyWorld(Stage1)
+-Stage2
+-Stage3
+-Credit
+
+Aktor
+hero
+ -hero utama
+ -hero1
+ -hero2
+ -hero3
+ -hero4
+ -hero5
+
+musuh
+ -tank1
+ -tank2
+ -tank3
+ -tank4
+ -plane1
+ -plane2
+
+weapon
+ -rocket1
+ -rocket2
+ -rocket3
+
+blast
+ - 
