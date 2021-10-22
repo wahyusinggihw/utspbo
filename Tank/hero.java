@@ -13,15 +13,16 @@ public class hero extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int delay = 0;
+    int y = 200;
+    double g = 1;
+    private boolean haspressed = false;
+    private boolean isalive = true;
+    private boolean isacross = false;
+    private boolean hasaddscore = false;
     public void act()
     {
         // Add your action code here.
-        setLocation(getX()+1,getY());
-            if (getX()==50)
-            {
-                setLocation(getX()-1,getY());
-            }
-        
+        setLocation(getX(),getY());
         if(Greenfoot.isKeyDown("a"))
         {
             setLocation(getX()-2,getY());

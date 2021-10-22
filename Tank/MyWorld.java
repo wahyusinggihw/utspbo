@@ -33,10 +33,14 @@ public class MyWorld extends World
             Greenfoot.delay(200);
             Greenfoot.setWorld(new Stage2());
         }
+        
+        
     }
+    
     private void prepare()
-    {
+    { 
         showText("STAGE 1",400,100);
+        Greenfoot.delay (200);
         
         hero hero = new hero();
         addObject(hero,0,313);
