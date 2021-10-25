@@ -21,7 +21,6 @@ public class MyWorld extends World
         prepare();
     }
     
-    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -35,6 +34,7 @@ public class MyWorld extends World
         if(condition)
         {
             showText("STAGE 1",400,100);
+            addObject(new tutorial(),400,150);
             timer = 100;
             condition = false;
         }
@@ -42,29 +42,32 @@ public class MyWorld extends World
         {
             showText("",400,100);
         }
-        
+                
         if(MyWorld.score.getValue()>=10)
         {
             showText("YOU WIN!",400,100);
             Greenfoot.delay(100);
             showText("NEXT STAGE",400,100);
-            Greenfoot.delay(200);
+            Greenfoot.delay(100);
             Greenfoot.setWorld(new Stage2());
         }
         
         if(MyWorld.hp.getValue()==0)
         {
-            Greenfoot.delay(100);
+            removeObject(new hero());
+            removeObject(new hero2());
+            //Greenfoot.delay(100);
             Greenfoot.setWorld(new OverPage());
         }
     }
     
     private void prepare()
     { 
+        
         //hero
         hero hero = new hero();
         addObject(hero,0,322);
-        
+
         //musuh
         tank1 tank1 = new tank1();
         addObject(tank1,800,322);
@@ -72,9 +75,10 @@ public class MyWorld extends World
         Counter counter = new Counter();
         addObject(score,56,22);
         score.setValue(0);
-        
+
         Counter counter2 = new Counter();
         addObject(hp,56,57);
         hp.setValue(1);
+
     }
 }

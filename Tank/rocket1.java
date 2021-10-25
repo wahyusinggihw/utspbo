@@ -17,6 +17,12 @@ public class rocket1 extends Actor
         // Add your action code here.
         setLocation(getX()+5,getY());
         if(isAtEdge())
-            getWorld().removeObject(this);            
+            getWorld().removeObject(this); 
+        else if(isTouching(rocket2kiri.class))
+        {
+            removeTouching(rocket2kiri.class);
+            getWorld().addObject(new blast2(),getX(),getY());
+            getWorld().removeObject(this);
+        }
     }
 }

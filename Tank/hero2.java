@@ -44,7 +44,7 @@ public class hero2 extends Actor
         {
         getWorld().addObject(new rocket1kiri(),getX()-60,getY()-20);
         delay=0;
-        //Greenfoot.playSound("tank_amunisi.mp3");
+        Greenfoot.playSound("tank_amunisi.mp3");
         }
     }
 }
