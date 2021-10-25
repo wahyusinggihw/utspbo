@@ -26,27 +26,48 @@ public class MyWorld extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
+    int delay = 0;
+    int timer;
+    boolean condition = true;
     public void act()
-    {
+    {    
+        timer--;
+        if(condition)
+        {
+            showText("STAGE 1",400,100);
+            timer = 100;
+            condition = false;
+        }
+        if(timer == 1)
+        {
+            showText("",400,100);
+        }
+        
         if(MyWorld.score.getValue()>=10)
         {
+            showText("YOU WIN!",400,100);
+            Greenfoot.delay(100);
+            showText("NEXT STAGE",400,100);
             Greenfoot.delay(200);
             Greenfoot.setWorld(new Stage2());
         }
         
-        
+        if(MyWorld.hp.getValue()==0)
+        {
+            Greenfoot.delay(100);
+            Greenfoot.setWorld(new OverPage());
+        }
     }
     
     private void prepare()
     { 
-        showText("STAGE 1",400,100);
-        Greenfoot.delay (200);
-        
+        //hero
         hero hero = new hero();
-        addObject(hero,0,313);
-
+        addObject(hero,0,322);
+        
+        //musuh
         tank1 tank1 = new tank1();
-        addObject(tank1,800,315);
+        addObject(tank1,800,322);
 
         Counter counter = new Counter();
         addObject(score,56,22);
@@ -54,6 +75,6 @@ public class MyWorld extends World
         
         Counter counter2 = new Counter();
         addObject(hp,56,57);
-        hp.setValue(5);
+        hp.setValue(1);
     }
 }

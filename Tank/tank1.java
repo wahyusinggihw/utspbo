@@ -16,7 +16,7 @@ public class tank1 extends Actor
     {
         // Add your action code here.
         setLocation(getX()-1,getY());
-            if (getX()==700)
+            if (getX()==0)
             {
                 setLocation(getX()+1,getY());
             }
@@ -28,5 +28,22 @@ public class tank1 extends Actor
             getWorld().addObject(new blast2(),getX(),getY());
             getWorld().removeObject(this);
         }
+        
+        else if(isTouching(rocket1kiri.class))
+        {
+            removeTouching(rocket1kiri.class);
+            MyWorld.score.add(10);
+            getWorld().addObject(new blast2(),getX(),getY());
+            getWorld().removeObject(this);
+        }
+        
+        else if(isTouching(hero.class))
+        {
+            removeTouching(hero.class);
+            MyWorld.hp.add(-1);
+            getWorld().addObject(new blast(),getX(),getY());
+            getWorld().removeObject(this);
+        }
     }
+
 }

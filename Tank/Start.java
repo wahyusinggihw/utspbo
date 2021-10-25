@@ -26,4 +26,5 @@ public class Start extends Actor
             Greenfoot.setWorld(new MyWorld());
         }
     }
+   
 }

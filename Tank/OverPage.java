@@ -25,7 +25,7 @@ public class OverPage extends World
         GameOver GameOver = new GameOver();
         addObject (GameOver, 100, 100);
         GameOver.setLocation(400,200);
-        showText("Kamu Kalah. Cupu!",400,300);
+        showText("Kamu Kalah. :(",400,300);
         showText("Score : " +MyWorld.score.getValue()+" points" ,400,350);
 
         //Quit quit = new Quit();

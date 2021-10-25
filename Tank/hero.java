@@ -13,34 +13,28 @@ public class hero extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int delay = 0;
-    int y = 200;
-    double g = 1;
-    private boolean haspressed = false;
-    private boolean isalive = true;
-    private boolean isacross = false;
-    private boolean hasaddscore = false;
     public void act()
     {
         // Add your action code here.
         setLocation(getX(),getY());
         if(Greenfoot.isKeyDown("a"))
         {
-            setLocation(getX()-2,getY());
+            hero2 hero2 = new hero2();
+            getWorld().addObject(hero2,getX()-2,getY());
+            getWorld().removeObject(this);
         }
-        if(Greenfoot.isKeyDown("d"))
+        
+        else if(Greenfoot.isKeyDown("d"))
         {
-            setLocation(getX()+2,getY());
+            hero hero = new hero();
+            getWorld().addObject(hero,getX()+2,getY());
+            getWorld().removeObject(this);
         }
-        if(Greenfoot.isKeyDown("w"))
-        {
-            //jika tombol w ditekan, moncong hero akan berubah ke class hero1
-        }
-        if(Greenfoot.isKeyDown("space"))
+        else if(Greenfoot.isKeyDown("space"))
         {
             shooting();
         }
     }
-    
     public void shooting()
     {
         delay++;
