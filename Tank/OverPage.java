@@ -28,7 +28,10 @@ public class OverPage extends World
         showText("Kamu Kalah. :(",400,300);
         showText("Score : " +MyWorld.score.getValue()+" points" ,400,350);
 
-        //Quit quit = new Quit();
-        //addObject(quit,504,443);
+        mainmenu mainmenu = new mainmenu();
+        addObject(mainmenu,120,400);
+        
+        quit quit = new quit();
+        addObject(quit,750,400);
     }
 }

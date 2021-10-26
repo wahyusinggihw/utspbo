@@ -30,6 +30,7 @@ public class MyWorld extends World
     boolean condition = true;
     public void act()
     {    
+        //tulisan Stage 1
         timer--;
         if(condition)
         {
@@ -42,7 +43,7 @@ public class MyWorld extends World
         {
             showText("",400,100);
         }
-                
+        //score untuk ke stage selanjutnya
         if(MyWorld.score.getValue()>=10)
         {
             showText("YOU WIN!",400,100);
@@ -51,7 +52,7 @@ public class MyWorld extends World
             Greenfoot.delay(100);
             Greenfoot.setWorld(new Stage2());
         }
-        
+        //gameover
         if(MyWorld.hp.getValue()==0)
         {
             removeObject(new hero());

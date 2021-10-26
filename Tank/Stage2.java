@@ -10,7 +10,6 @@ public class Stage2 extends World
 {
     static Counter score = new Counter("Score : ");
     static Counter hp = new Counter("Hp : ");
-
     /**
      * Constructor for objects of class Stage2.
      * 
@@ -23,31 +22,41 @@ public class Stage2 extends World
     }
     int timer;
     boolean condition = true;
+    tank2 tank2 = new tank2();
     public void act()
     {
+        //tulisan Stage 2
         timer--;
         if(condition)
         {
             showText("STAGE 2",400,100);
-            //Greenfoot.delay(100);
             timer = 100;
-            //showText("",400,100);
             condition = false;
         }
         if(timer == 1)
         {
             showText("",400,100);
         }
-        
-        /*if(MyWorld.score.getValue()>=30)
+        //jika pesawat tank2 tidak ada di world dan mendapat angka 1 dari range 200-1 maka akan ditambah tank2 lainnya
+        if (tank2.getWorld() == null && Greenfoot.getRandomNumber(200)==1)
+        {
+            addObject(new tank2(),800,322);
+        }
+        //jika score lebih dari 50 dan mendapat angka 1 dari range 300-1 maka akan ditambah tank3
+        if(MyWorld.score.getValue()>=50 && Greenfoot.getRandomNumber(300)==1)
+        {
+            addObject(new tank3(),1,322);
+        }
+        //score untuk ke stage selanjutnya
+        if(MyWorld.score.getValue()>=40)
         {
             showText("YOU WIN!",400,100);
             Greenfoot.delay(100);
             showText("NEXT STAGE",400,100);
             Greenfoot.delay(100);
             Greenfoot.setWorld(new Stage3());
-        }*/
-        
+        }
+        //gameover
         if(Stage2.hp.getValue()==0)
         {
             removeObject(new hero());
@@ -64,11 +73,11 @@ public class Stage2 extends World
         addObject(hero,0,322);
 
         //musuh
-        //for(int i=1; i<=2; i++)
-          //  addObject(new tank2(),Greenfoot.getRandomNumber(getWidth()),322);
+        //for(int i=1; i==1; i++)
+               
         tank2 tank2 = new tank2();
-        addObject(new tank2(),800,322);
-        
+        addObject(tank2,800,322);
+          
         Counter counter = new Counter();
         addObject(score,56,22);
         score.setValue(0);
@@ -78,4 +87,5 @@ public class Stage2 extends World
         hp.setValue(5);
 
     }
-}
+    }
+

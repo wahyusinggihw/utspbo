@@ -23,6 +23,7 @@ public class rocket1 extends Actor
             removeTouching(rocket2kiri.class);
             getWorld().addObject(new blast2(),getX(),getY());
             getWorld().removeObject(this);
+            Greenfoot.playSound("blast.wav");
         }
     }
 }
