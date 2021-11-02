@@ -18,7 +18,7 @@ public class rocket3 extends Actor
         setLocation(getX(),getY()+1);
         if(isAtEdge())
             getWorld().removeObject(this); 
-        else if(isTouching(hero.class) || isTouching(hero2.class))
+        else if(isTouching(hero.class) || isTouching(hero.class))
         {
             removeTouching(rocket3.class);
             Stage3.hp.add(-1);

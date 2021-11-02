@@ -70,7 +70,7 @@ public class Stage2 extends World
     {
         //hero 
         hero hero = new hero();
-        addObject(hero,0,322);
+        addObject(hero,0,310);
 
         //musuh
         //for(int i=1; i==1; i++)

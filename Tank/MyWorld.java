@@ -67,7 +67,7 @@ public class MyWorld extends World
         
         //hero
         hero hero = new hero();
-        addObject(hero,0,322);
+        addObject(hero,0,310);
 
         //musuh
         tank1 tank1 = new tank1();

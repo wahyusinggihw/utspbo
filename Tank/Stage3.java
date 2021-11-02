@@ -95,7 +95,7 @@ public class Stage3 extends World
     {
         //hero 
         hero hero = new hero();
-        addObject(hero,400,322);
+        addObject(hero,400,310);
 
         Counter counter = new Counter();
         addObject(score,56,22);
