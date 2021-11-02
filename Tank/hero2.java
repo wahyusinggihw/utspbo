@@ -36,8 +36,14 @@ public class hero2 extends Actor
         
         else if(Greenfoot.isKeyDown("space"))
         {
-            if(a == 3){
-                shootup();
+            if(a == 2){
+                shootup2();
+            }else if(a == 3){
+                shootup3();
+            }else if(a == 4){
+                shootup4();
+            }else if(a == 5){
+                shootup5();
             }else{
                 shooting();
             }
@@ -76,19 +82,51 @@ public class hero2 extends Actor
         delay++;
         if(delay==30)
         {
-        getWorld().addObject(new rocket1kiri(),getX()-60,getY()-20);
+        getWorld().addObject(new rocket1kiri(),getX()-60,getY()-5);
         delay=0;
         Greenfoot.playSound("tank_amunisi.mp3");
         }
     }
     
-        public void shootup(){
+        public void shootup2(){
         delay++;
         if(delay==15)
         {
-        getWorld().addObject(new roketatas(),getX()+60,getY()-20);
-        delay=0;
-        Greenfoot.playSound("tank_amunisi.mp3");
+            getWorld().addObject(new roketatas4(),getX()-14,getY()+60);
+            delay=0;
+            Greenfoot.playSound("tank_amunisi.mp3");
         }
     }
+    
+        public void shootup3(){
+        delay++;
+        if(delay==15)
+        {
+            getWorld().addObject(new roketatas4(),getX()+45,getY()-45);
+            delay=0;
+            Greenfoot.playSound("tank_amunisi.mp3");
+        }
+    }
+
+        public void shootup4(){
+        delay++;
+        if(delay==25)
+        {
+            getWorld().addObject(new roketatas5(),getX()+35,getY()-55);
+            delay=0;
+            Greenfoot.playSound("tank_amunisi.mp3");
+        }
+        
+    }
+        public void shootup5(){
+        delay++;
+        if(delay==25)
+        {
+            getWorld().addObject(new roketatas6(),getX()+15,getY()-55);
+            delay=0;
+            Greenfoot.playSound("tank_amunisi.mp3");
+        }
+    }
+    
+
 }

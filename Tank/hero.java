@@ -42,7 +42,7 @@ public class hero extends Actor
             }else if(a == 4){
                 shootup4();
             }else if(a == 5){
-
+                shootup5();
             }else{
                 shooting();
             }
@@ -81,7 +81,7 @@ public class hero extends Actor
         delay++;
         if(delay==15)
         {
-            getWorld().addObject(new rocket1(),getX()+60,getY()-20);
+            getWorld().addObject(new rocket1(),getX()+60,getY()-5);
             delay=0;
             Greenfoot.playSound("tank_amunisi.mp3");
         }
@@ -104,7 +104,7 @@ public class hero extends Actor
         delay++;
         if(delay==15)
         {
-            getWorld().addObject(new roketatas(),getX()+50,getY()-55);
+            getWorld().addObject(new roketatas(),getX()+45,getY()-45);
             delay=0;
             Greenfoot.playSound("tank_amunisi.mp3");
         }
@@ -112,9 +112,19 @@ public class hero extends Actor
 
         public void shootup4(){
         delay++;
-        if(delay==15)
+        if(delay==25)
         {
-            getWorld().addObject(new roketatas(),getX()+40,getY()-60);
+            getWorld().addObject(new roketatas2(),getX()+35,getY()-55);
+            delay=0;
+            Greenfoot.playSound("tank_amunisi.mp3");
+        }
+        
+    }
+        public void shootup5(){
+        delay++;
+        if(delay==25)
+        {
+            getWorld().addObject(new roketatas3(),getX()+18,getY()-55);
             delay=0;
             Greenfoot.playSound("tank_amunisi.mp3");
         }
