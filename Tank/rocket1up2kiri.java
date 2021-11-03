@@ -1,21 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class roketatas3 here.
+ * Write a description of class rocket1up2kiri here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class roketatas3 extends Actor
+public class rocket1up2kiri extends rocketup
 {
     /**
-     * Act - do whatever the roketatas3 wants to do. This method is called whenever
+     * Act - do whatever the rocket1up2kiri wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
         // Add your action code here.
-            setLocation(getX()+3,getY()-10);
+        setLocation(getX()-5,getY()-3);
+        setRotation(+25);
         if(isAtEdge())
             getWorld().removeObject(this); 
         else if(isTouching(rocket2kiri.class))
@@ -25,6 +26,5 @@ public class roketatas3 extends Actor
             getWorld().removeObject(this);
             Greenfoot.playSound("blast.wav");
         }
-        
     }
 }

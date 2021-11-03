@@ -79,55 +79,49 @@ public class hero extends Actor
     public void shooting()
     {
         delay++;
-        if(delay==15)
+        if(delay==30)
         {
-            getWorld().addObject(new rocket1(),getX()+60,getY()-5);
+            getWorld().addObject(new rocket1(),getX()+70,getY()-5);
             delay=0;
             Greenfoot.playSound("tank_amunisi.mp3");
         }
     }
 
-
-
-    
     public void shootup2(){
         delay++;
-        if(delay==15)
+        if(delay==30)
         {
-            getWorld().addObject(new roketatas(),getX()+55,getY()-34);
+            getWorld().addObject(new rocket1up2(),getX()+55,getY()-34);
             delay=0;
             Greenfoot.playSound("tank_amunisi.mp3");
         }
     }
-    
         public void shootup3(){
         delay++;
-        if(delay==15)
+        if(delay==30)
         {
-            getWorld().addObject(new roketatas(),getX()+45,getY()-45);
+            getWorld().addObject(new rocket1up3(),getX()+50 ,getY()-50);
             delay=0;
             Greenfoot.playSound("tank_amunisi.mp3");
         }
     }
-
-        public void shootup4(){
+    public void shootup4(){
         delay++;
-        if(delay==25)
+        if(delay==30)
         {
-            getWorld().addObject(new roketatas2(),getX()+35,getY()-55);
+            getWorld().addObject(new rocket1up4(),getX()+40,getY()-60);
+            
             delay=0;
             Greenfoot.playSound("tank_amunisi.mp3");
         }
-        
     }
-        public void shootup5(){
+    public void shootup5(){
         delay++;
-        if(delay==25)
+        if(delay==30)
         {
-            getWorld().addObject(new roketatas3(),getX()+18,getY()-55);
+            getWorld().addObject(new rocket1up5(),getX()+20,getY()-65);
             delay=0;
             Greenfoot.playSound("tank_amunisi.mp3");
         }
     }
-
 }

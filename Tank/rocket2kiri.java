@@ -33,7 +33,7 @@ public class rocket2kiri extends Actor
             getWorld().addObject(new blast2(),getX(),getY());
             getWorld().removeObject(this);
         }
-        else if(isTouching(hero.class))
+        else if(isTouching(hero2.class))
         {
             Stage2.hp.add(-1);
             Stage3.hp.add(-1);

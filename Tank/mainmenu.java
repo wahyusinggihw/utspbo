@@ -22,6 +22,7 @@ public class mainmenu extends Actor
         }
         if(Greenfoot.mouseClicked(this))
         {
+            Start.bgsound.stop();
             Greenfoot.setWorld(new Menu());
         }
     }

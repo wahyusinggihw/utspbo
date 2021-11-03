@@ -38,7 +38,7 @@ public class hero2 extends Actor
         {
             if(a == 2){
                 shootup2();
-            }else if(a == 3){
+            }else if (a == 3){
                 shootup3();
             }else if(a == 4){
                 shootup4();
@@ -82,51 +82,46 @@ public class hero2 extends Actor
         delay++;
         if(delay==30)
         {
-        getWorld().addObject(new rocket1kiri(),getX()-60,getY()-5);
+        getWorld().addObject(new rocket1kiri(),getX()-70,getY()-5);
         delay=0;
         Greenfoot.playSound("tank_amunisi.mp3");
         }
     }
     
-        public void shootup2(){
+    public void shootup2(){
         delay++;
-        if(delay==15)
+        if(delay==30)
         {
-            getWorld().addObject(new roketatas4(),getX()-14,getY()+60);
-            delay=0;
-            Greenfoot.playSound("tank_amunisi.mp3");
+        getWorld().addObject(new rocket1up2kiri(),getX()-65,getY()-36);
+        delay=0;
+        Greenfoot.playSound("tank_amunisi.mp3");
         }
     }
-    
-        public void shootup3(){
+    public void shootup3(){
         delay++;
-        if(delay==15)
+        if(delay==30)
         {
-            getWorld().addObject(new roketatas4(),getX()+45,getY()-45);
-            delay=0;
-            Greenfoot.playSound("tank_amunisi.mp3");
+        getWorld().addObject(new rocket1up3kiri(),getX()-52,getY()-50);
+        delay=0;
+        Greenfoot.playSound("tank_amunisi.mp3");
         }
     }
-
-        public void shootup4(){
+    public void shootup4(){
         delay++;
-        if(delay==25)
+        if(delay==30)
         {
-            getWorld().addObject(new roketatas5(),getX()+35,getY()-55);
-            delay=0;
-            Greenfoot.playSound("tank_amunisi.mp3");
-        }
-        
-    }
-        public void shootup5(){
-        delay++;
-        if(delay==25)
-        {
-            getWorld().addObject(new roketatas6(),getX()+15,getY()-55);
-            delay=0;
-            Greenfoot.playSound("tank_amunisi.mp3");
+        getWorld().addObject(new rocket1up4kiri(),getX()-38,getY()-59);
+        delay=0;
+        Greenfoot.playSound("tank_amunisi.mp3");
         }
     }
-    
-
+    public void shootup5(){
+        delay++;
+        if(delay==30)
+        {
+        getWorld().addObject(new rocket1up5kiri(),getX()-20,getY()-55);
+        delay=0;
+        Greenfoot.playSound("tank_amunisi.mp3");
+        }
+    }
 }

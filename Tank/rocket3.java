@@ -42,5 +42,13 @@ public class rocket3 extends Actor
             getWorld().removeObject(this);
             Greenfoot.playSound("blast.wav");
         }
+        else if(isTouching(rocketup.class))
+        {
+            removeTouching(rocketup.class);
+            Stage3.score.add(20);
+            getWorld().addObject(new blast2(),getX(),getY());
+            getWorld().removeObject(this);
+            Greenfoot.playSound("blast.wav");
+        }
     }
 }

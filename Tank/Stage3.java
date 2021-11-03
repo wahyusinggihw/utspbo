@@ -56,7 +56,7 @@ public class Stage3 extends World
             spawnbomber();
         }
         //score untuk ke stage selanjutnya
-        if(Stage3.score.getValue()>=40)
+        if(Stage3.score.getValue()>=200)
         {
             showText("YOU WIN!",400,100);
             Greenfoot.delay(100);

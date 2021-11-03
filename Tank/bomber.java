@@ -21,13 +21,22 @@ public class bomber extends Actor
         {
             setLocation(getX()-2,getY());
         }
-        if(isAtEdge())
+        else if(isAtEdge())
         {
             getWorld().removeObject(this);
         }
         else 
         {
             bombing();
+        }
+        
+        if(isTouching(rocketup.class))
+        {
+            removeTouching(rocketup.class);
+            MyWorld.score.add(10);
+            getWorld().addObject(new blast(),getX(),getY());
+            getWorld().removeObject(this);
+            Greenfoot.playSound("blast.wav");
         }
     }
     public void bombing()

@@ -1,0 +1,1 @@
+"menambahkan class untuk peluru ke atas, fix posisi peluru, fix bgsound tetap menyala ketika main menu di tekan, add ledakan jika peluru atas bersentuhan dengan bomber dan bomb .Bug di kecepatan peluru atas"
